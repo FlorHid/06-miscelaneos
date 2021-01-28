@@ -1,0 +1,47 @@
+<h1>Change the banner color and letter with ng switch</h1>
+<br>
+
+<div [ngSwitch]="alert">
+    <div *ngSwitchCase="'success'">
+        <h3>Success</h3>
+    </div>
+    <div *ngSwitchCase="'info'">
+        <h3>Info</h3>
+    </div>
+    <div *ngSwitchCase="'warning'">
+        <h3>Warning</h3>
+    </div>
+    <div *ngSwitchDefault>
+        <h3>Danger</h3>
+    </div>
+</div>
+<br>
+
+<div>
+    <button type="button" (click)="alert='success'" class="btn btn-success">Change to success</button>
+    <button type="button" (click)="alert='danger'" class="btn btn-danger">Change to danger</button>
+    <button type="button" (click)="alert='warning'" class="btn btn-warning">Change to warning</button>
+    <button type="button" (click)="alert='info'" class="btn btn-info">Change to info</button>
+</div>
+
+<br>
+
+<div [ngSwitch]="alert">
+
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+    </div>
+
+    <div *ngSwitchCase="'danger'" class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+    </div>
+
+    <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+    </div>
+
+    <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+    </div>
+
+</div>
